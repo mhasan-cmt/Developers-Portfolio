@@ -579,7 +579,10 @@ img{
     margin-right: var(--mb-0-25);
 }
 /* Active Modal */
-
+.modal_active{
+    opacity: 1;
+    visibility: visible;
+}
 
 /*==================== PORTFOLIO ====================*/
 

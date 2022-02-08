@@ -606,7 +606,31 @@ img{
 .portfolio_button:hover .button_icon{
     transform: translateX(.25rem);
 }
-
+.swiper-button-prev::after,
+.swiper-button-next::after{
+    content: '';
+}
+.swiper_portfolio-icon{
+    font-size: 2rem;
+    color: var(--first-color);
+}
+.swiper-button-prev{
+    left: -.5rem;
+}
+.swiper-button-next{
+    right: -.5rem;
+}
+.swiper-horizontal>.swiper-pagination-bullets{
+    bottom: -2.5rem;
+}
+.swiper-pagination-bullet-active{
+    background-color: var(--first-color);
+}
+.swiper-button-next,
+.swiper-button-prev,
+.swiper-pagination-bullet{
+    outline: none;
+}
 /*==================== PROJECT IN MIND ====================*/
 
 

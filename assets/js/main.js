@@ -103,7 +103,21 @@ let swiper = new Swiper(".portfolio_container", {
   });
 
 /*==================== TESTIMONIAL ====================*/
-
+let swiperTestimonial = new Swiper(".testimonial_container", {
+    loop: true,
+    grabCursor: true,
+    spaceBetween: 48,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      dynamicBullets: true
+    },
+    breakpoint:{
+        568:{
+            slidesPerView:2
+        }
+    }
+  });
 
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
 

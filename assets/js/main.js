@@ -88,6 +88,7 @@ modalCloses.forEach((modalClose)=>{
 });
 
 
+
 /*==================== PORTFOLIO SWIPER  ====================*/
 let swiper = new Swiper(".portfolio_container", {
     cssMode: true,
@@ -163,3 +164,42 @@ function scrollUp(){
 window.addEventListener('scroll', scrollUp);
 
 /*==================== DARK LIGHT THEME ====================*/ 
+const themeToggleButton = document.getElementById('theme-toggle');
+const darkTheme= 'dark_theme';
+const iconTheme = 'uil-sun';
+
+//previosuly selected
+const selectedTheme = localStorage.getItem('selected-theme');
+const selectedIcon = localStorage.getItem('selected-icon');
+
+//get current theme
+const getCurrentTheme = ()=>{
+    if(document.body.classList.contains(darkTheme)){
+        return 'dark';
+    }else{
+        return 'light';
+    }
+}
+//get current icon
+const getCurrentIcon = ()=>{
+    if(themeToggleButton.classList.contains(iconTheme)){
+        return 'uil-moon';
+    }else{
+        return 'uil-sun'
+    }
+}
+if(selectedTheme){
+    document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme);
+    themeToggleButton.classList[selectedIcon == 'uil-moon' ? 'add' : 'remove'](iconTheme);
+}
+
+// Manually toggle theme 
+themeToggleButton.addEventListener('click', ()=>{
+    document.body.classList.toggle(darkTheme);
+    themeToggleButton.classList.toggle(iconTheme);
+    //save the choices
+    localStorage.setItem('selected-theme', getCurrentTheme());
+    localStorage.setItem('selected-icon', getCurrentIcon());
+    console.log(getCurrentTheme());
+    console.log(getCurrentIcon());
+});

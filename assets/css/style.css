@@ -68,10 +68,30 @@
 }
 
 /*========== Variables Dark theme ==========*/
-
+body.dark_theme{
+    /* HSL color mode */
+    --first-color-second: hsl(var(--hue-color),30%,8%);
+    --title-color: hsl(var(--hue-color),8%,95%);
+    --text-color:hsl(var(--hue-color),8%,75%);
+    --input-color: hsl(var(--hue-color),29%,60%);
+    --body-color: hsl(var(--hue-color),28%,20%);
+    --container-color:hsl(var(--hue-color), 29%, 60%);
+}
 
 /*========== Button Dark/Light ==========*/
-
+.nav_btns{
+    display: flex;
+    align-items: center;
+}
+.change_theme{
+    font-size: 1.25rem;
+    color: var(--title-color);
+    margin-right: var(--mb-1);
+    cursor: pointer;
+}
+.change_theme:hover{
+    color: var(--first-color);
+}
 
 /*==================== BASE ====================*/
 *{

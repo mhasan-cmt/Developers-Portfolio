@@ -13,7 +13,7 @@
 - Mobile first
 - Attractive ui
 - Dark/Light Theme Functionality
-- Custom Components: Modal, Accordion, Buttons etc.
+- Custom Components: Modal, Accordion, Tabs, Buttons etc.
 - Loads Fast
 
 ## External Library

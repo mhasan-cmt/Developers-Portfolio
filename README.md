@@ -17,7 +17,8 @@
 - Loads Fast
 
 ## External Library
-+ Only Swiper Js
++ Swiper Js
++ Unicons Icon Library
 
 <h2 style= "margin:2rem 0">
 ✨ Feel free to Fork

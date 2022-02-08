@@ -20,6 +20,8 @@
     --input-color: hsl(var(--hue-color),70%,96%);
     --body-color: hsl(var(--hue-color),60%,99%);
     --container-color:#fff ;
+    --scroll-bar-color: hsl(var(var(--hue-color), 12%, 90%));
+    --scroll-thumb-color: hsl(var(var(--hue-color), 12%, 80%));
 
     /*========== Font and typography ==========*/
     --body-font: 'Poppins',sans-serif;
@@ -830,8 +832,18 @@ img{
 }
 
 /*========== SCROLL BAR ==========*/
-
-
+/* ::-webkit-scrollbar{
+    width: .60rem;
+    border-radius: .5rem;
+    background-color: var(--scroll-bar-color);
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--scroll-thumb-color);
+    border-radius: .5rem;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: var(--text-color-light);
+} */
 /*==================== MEDIA QUERIES ====================*/
 /* For small devices */
 

@@ -140,7 +140,16 @@ function scrollActive(){
 window.addEventListener('scroll', scrollActive);
 
 /*==================== CHANGE BACKGROUND HEADER ====================*/ 
+function scrollHeader(){
+    const nav = document.getElementById('header');
 
+    if(this.scrollY >= 80){
+        nav.classList.add('scroll-header');
+    }else{
+        nav.classList.remove('scroll-header')
+    }
+}
+window.addEventListener('scroll', scrollHeader);
 
 /*==================== SHOW SCROLL UP ====================*/ 
 

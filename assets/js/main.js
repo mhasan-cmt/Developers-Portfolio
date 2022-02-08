@@ -120,7 +120,24 @@ let swiperTestimonial = new Swiper(".testimonial_container", {
   });
 
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
+const section = document.querySelectorAll('section[id]');
 
+function scrollActive(){
+    const scrollY = window.pageYOffset;
+
+    section.forEach(current=>{
+        const sectionHeight = current.offsetHeight;
+        const sectionTop = current.offsetTop - 50;
+        const sectionId = current.getAttribute('id');
+        if(scrollY >  sectionTop && scrollY <= sectionTop + sectionHeight){
+            document.querySelector('.nav_menu a[href*='+sectionId+']').classList.add('active-link');
+        }else{
+            document.querySelector('.nav_menu a[href*='+sectionId+']').classList.remove('active-link');
+        }
+    });
+}
+
+window.addEventListener('scroll', scrollActive);
 
 /*==================== CHANGE BACKGROUND HEADER ====================*/ 
 

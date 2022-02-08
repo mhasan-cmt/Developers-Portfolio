@@ -786,10 +786,28 @@ img{
 }
 
 /*========== SCROLL UP ==========*/
-
-
+.scrollup{
+    position: fixed;
+    right: 1rem;
+    background-color: var(--first-color);
+    opacity: .8;
+    padding: 0 .3rem;
+    border-radius: .4rem;
+    z-index: var(--z-tooltip);
+    transition: .4s;
+    bottom: -20%;
+}
+.scrollup:hover{
+    background-color: var(--first-color-alt);
+}
+.scrollup_icon{
+    font-size: 1.5rem;
+    color: #fff;
+}
 /* Show scroll */
-
+.show-scroll{
+    bottom: 5rem;
+}
 
 /*========== SCROLL BAR ==========*/
 
